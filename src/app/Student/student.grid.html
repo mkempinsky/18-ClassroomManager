@@ -1,0 +1,42 @@
+
+<div class= "panel student-panel animated fadeInDown">
+	<div class="panel-heading">
+	<h2 class="student-panel-head">Students
+		<button class="button is-white project-add-btn">
+		<a ui-sref ="student.newStudent">
+		<i class="fa fa-user-plus icon is-small project-add-btn" aria-hidden="true"></i><p class= "student-add-btn"> Add</p>
+		</a>
+		</button>
+	</h2>
+	</div>
+	<div>
+		<table class="table pan-two panel-block" id="student-table">
+		  <thead>
+		    <tr>
+		      <th>Student Name</th>
+		      <th>Assignments</th>
+		      <th></th>
+		      <th>
+		      </th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <td>name</td>
+		      <td>assignments</td>
+		      <td class="is-icon">
+		        <a ui-sref="student.detail">
+		          <p class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit
+		          </p>
+		        </a>
+		      </td>
+		      <td class="is-icon">
+		        <a href="#">
+		          <p class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</p><br>
+		        </a>
+		      </td>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>
+</div>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" ng-app= "app">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Classroom | Manager</title>
+	<!-- fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
+
+
+	<!-- css -->
+	<link rel="stylesheet" href="bower_components/animate.css/animate.css">
+	<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="bower_components/bulma/css/bulma.css">
+    <link rel="stylesheet" href="app/index.css">
+
+</head>
+
+<body>
+<!-- ++++ NAV BAR ++++ -->
+	<nav class="nav">
+	  <div class="nav-left">
+	    <a class="nav-item is-brand" href="#">
+	      <h2 id="nav-logo">Classroom Manager</h2>
+	    </a>
+	  </div>
+
+	  <span class="nav-toggle">
+	    <span></span>
+	    <span></span>
+	    <span></span>
+	  </span>
+
+	  <div class="nav-right nav-menu">
+	    <a class="nav-item" ui-sref="dashboard">
+	    	<h2> <span><i class="fa fa-home"></i></span> Dashboard</h2>
+	    </a>
+	    <a class="nav-item" ui-sref="student.grid">
+	      <h2>Students</h2>
+	    </a>
+	    <a class="nav-item" ui-sref="project.grid">
+	      <h2>Projects</h2>
+	    </a>
+
+	    <span class="nav-item">
+	      <a class="button is-primary" id="account-btn" href="#">
+	        <span class="icon">
+	          <i class="fa fa-user"></i>
+	        </span>
+	        <span><h2>Account</h2></span>
+	      </a>
+	    </span>
+	  </div>
+	</nav>
+
+<main>
+	<div ui-view></div>
+</main>
+
+<!-- ++++ FOOTER ++++ -->
+<footer id="footer" class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+		<span>
+		    <a class="icon-footer" href="https://github.com/mkempinsky">
+		    <i class="icon-footer fa fa-github-square icon is-medium"></i></a>
+	    </span>
+	    <span>
+	    	<a class="icon-footer" href="https://www.linkedin.com/in/michele-kempinsky-659758b4?trk=hp-identity-name">
+	    	<i class="icon-footer fa fa-linkedin-square icon is-medium" aria-hidden="true"></i></a>
+	    </span>
+	    <span>
+	    <p><i class="fa fa-copyright icon is-small" aria-hidden="true"></i> Michele Kempinsky 2016</p>
+	    </span>
+    </div>
+  </div>
+</footer>	
+
+
+<!-- bower:js -->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/animated/animated.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
+<!-- endbower -->
+
+<!-- inject:js -->
+<script src="app/app.module.js"></script>
+<script src="app/Core/assignment.factory.js"></script>
+<script src="app/Core/project.factory.js"></script>
+<script src="app/Core/student.factory.js"></script>
+<script src="app/Dashboard/dashboard.controller.js"></script>
+<script src="app/Project/project.detail.controller.js"></script>
+<script src="app/Project/project.grid.controller.js"></script>
+<script src="app/Project/project.newProject.controller.js"></script>
+<script src="app/Student/student.detail.controller.js"></script>
+<script src="app/Student/student.grid.controller.js"></script>
+<!-- endinject -->
+
+
+</body>
+
+</html>
