@@ -5,7 +5,7 @@
 		.module('app')
 		.factory('projectFactory', projectFactory);
 
-	projectFactory.$inject = [$http, $q, 'apiUrl'];
+	projectFactory.$inject = ['$http', '$q', 'apiUrl'];
 
 	function projectFactory($http, $q, apiUrl) {
 		var service = {

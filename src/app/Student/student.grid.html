@@ -21,9 +21,9 @@
 		    </tr>
 		  </thead>
 		  <tbody>
-		    <tr>
-		      <td>name</td>
-		      <td>assignments</td>
+		    <tr ng-repeat="student in studentGrid.students">
+		      <td>{{student.firstName}} {{student.lastName}}</td>
+		      <td>{{assignments.length}}</td>
 		      <td class="is-icon">
 		        <a ui-sref="student.detail">
 		          <p class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit

@@ -5,17 +5,22 @@
         .module('app')
         .controller('StudentGridController', StudentGridController);
 
-    StudentGridController.$inject = ['$stateParams'];
+    StudentGridController.$inject = ['studentFactory', 'projectFactory'];
 
     /* @ngInject */
-    function StudentGridController($stateParams) {
+    function StudentGridController(studentFactory, projectFactory) {
         var vm = this;
+        vm.title = 'StudentGridController';
 
         activate();
 
         ////////////////
 
         function activate() {
+            studentFactory.getAll().then(
+                function(students){
+                    vm.students = students;
+                });
         }
     }
 })();
