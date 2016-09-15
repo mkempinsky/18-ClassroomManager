@@ -5,17 +5,23 @@
         .module('app')
         .controller('ProjectGridController', ProjectGridController);
 
-    ProjectGridController.$inject = ['$stateParams'];
+    ProjectGridController.$inject = ['projectFactory'];
 
     /* @ngInject */
-    function ProjectGridController($stateParams) {
+    function ProjectGridController(projectFactory) {
         var vm = this;
+        vm.title = 'ProjectGridController';
 
         activate();
 
         ////////////////
 
         function activate() {
+            projectFactory.getAll().then(
+                function(projects){
+                    vm.projects = projects;
+                }
+            );
         }
     }
 })();

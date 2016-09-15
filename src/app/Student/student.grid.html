@@ -25,7 +25,7 @@
 		      <td>{{student.firstName}} {{student.lastName}}</td>
 		      <td>{{assignments.length}}</td>
 		      <td class="is-icon">
-		        <a ui-sref="student.detail">
+		        <a ui-sref="student.detail({studentId: student.studentId})">
 		          <p class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit
 		          </p>
 		        </a>

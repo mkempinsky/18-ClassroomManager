@@ -3,38 +3,38 @@
 	</div>
 		<div class="panel-divs columns">
 
-			<div class="column is-one-third animated fadeInDown pan-one">
+			<div class="column is-one-third animated fadeInDown pan-one" ui-sref="student.grid">
 				<div class="panel">
 					<div class="panel-heading">
 				    	<h2>Students</h2>
 				    </div>
 					<div class="panel-block">
-						<p class="count">0</p>
-					    <p>current students</p>
+						<p class="count">{{dashboard.studentAmt}}</p>
+					    <p>current student(s)</p>
 					</div>
 				</div>
 		  	</div>
 
 		  	<div class="column">
-		  		<div class="panel animated fadeInDown pan-two">
+		  		<div class="panel animated fadeInDown pan-two" ui-sref="project.grid">
 					<div class="panel-heading">
 				    	<h3>Projects</h3>
 				    </div>
 					<div class="panel-block">
-					    <p class="count">0</p>
-					    <p>current projects</p>
+					    <p class="count">{{dashboard.projectAmt}}</p>
+					    <p>current project(s)</p>
 					</div>
 				</div>
 		  	</div>
 
 		  	<div class="column">
-		  		<div class="panel animated fadeInDown pan-three">
+		  		<div class="panel animated fadeInDown pan-three" ui-sref="">
 					<div class="panel-heading">
-				    	<h3>Assignments</h3>
+				    	<h3>Assignment</h3>
 				    </div>
 					<div class="panel-block">
-					    <p class="count">0</p>
-					    <p>current assignments</p>
+					    <p class="count">{{dashboard.assignmentAmt}}</p>
+					    <p>current assignment(s)</p>
 					</div>
 				</div>
 		  	</div>

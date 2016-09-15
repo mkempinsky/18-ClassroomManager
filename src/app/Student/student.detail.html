@@ -2,8 +2,8 @@
 
 <div class= "panel student-panel animated fadeInDown">
 	<div class="panel-heading">
-		<h2 class="student-panel-head">
-		{{Student Name
+		<h2 class="student-panel-head" ng-model="studentDetail.student.studentId">
+		{{student.firstName}} {{student.lastName}}
 		</h2>
 	</div>
 
@@ -18,15 +18,15 @@
 						</p>
 					<label class="label">Last Name:</label>
 						<p class="control">
-				  		<input class="input" type="text" placeholder="{{student.lastName}}" ng-model="studentDetail.student.firstName">
+				  		<input class="input" type="text" placeholder="{{student.lastName}}" ng-model="studentDetail.student.lastName">
 						</p>
 					<label class="label"><i class="fa fa-envelope-o" aria-hidden="true"></i> Email:</label>
 						<p class="control">
-				  		<input class="input" type="text" placeholder="{{student">
+				  		<input class="input" type="text" placeholder="{{student.emailAddress}}" ng-model="studentDetail.student.emailAddress">
 						</p>
-					<label class="label"><i class="fa fa-phone" aria-hidden="true"></i> Phone:</label>
+					<label class="label"><i class="fa fa-phone" aria-hidden="true" ng-model="studentDetail.student.phone"></i> Phone:</label>
 						<p class="control">
-				  		<input class="input" type="text" placeholder="{{student">
+				  		<input class="input" type="text" placeholder="{{student.phone}}">
 						</p>
 				</div>
 			</div>

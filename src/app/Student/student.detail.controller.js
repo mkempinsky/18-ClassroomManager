@@ -28,11 +28,13 @@
 
         ////////////////
 
+
+        // attach id to page to get specific student
         function activate() {
             if ($stateParams.studentID) {
                 studentFactory.getById($stateParams.studentId).then(
-                    function(student){
-                        vm.student = student;
+                    function(students){
+                        vm.students = students;
                     }
                 );
             } else {

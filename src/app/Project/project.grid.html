@@ -20,9 +20,9 @@
 		    </tr>
 		  </thead>
 		  <tbody>
-		    <tr>
-		      <td>name</td>
-		      <td>assignments</td>
+		    <tr ng-repeat="project in projectGrid.projects">
+		      <td>{{project.name}}</td>
+		      <td>{{project.description}}</td>
 		      <td class="is-icon">
 		        <a ui-sref="project.detail">
 		          <p class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit
